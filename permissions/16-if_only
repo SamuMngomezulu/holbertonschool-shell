@@ -1,7 +1,2 @@
 #!/bin/bash
-if [ -e hello ]; then
-    owner=$(stat -c "%U" hello)
-    if [ "$owner" = "guillaume" ]; then
-        chown vincent hello
-    fi
-fi
+chown --from=guillaume vincent hello
